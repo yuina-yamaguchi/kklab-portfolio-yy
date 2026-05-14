@@ -1,4 +1,4 @@
-# ｍy Portfolio Site
+# My Portfolio Site
 
 A lightweight, dependency-free static portfolio site. Built with just `index.html`, `style.css`, and `script.js` — ready to deploy on GitHub Pages.
 
