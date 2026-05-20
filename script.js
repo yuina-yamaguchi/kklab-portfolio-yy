@@ -1,70 +1,64 @@
 (() => {
   'use strict';
 
-  /* ===== テーマ ===== */
-  const html        = document.documentElement;
-  const themeBtn    = document.getElementById('theme-toggle');
-  const THEME_KEY   = 'theme';
+  /* ── Theme ── */
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('theme-toggle');
 
   function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    themeBtn.textContent    = theme === 'dark' ? '🌙' : '☀️';
+    html.dataset.theme = theme;
+    themeBtn.textContent = theme === 'dark' ? '🌙' : '☀️';
     themeBtn.setAttribute('aria-pressed', String(theme === 'light'));
-    localStorage.setItem(THEME_KEY, theme);
+    localStorage.setItem('theme', theme);
   }
 
-  const savedTheme = localStorage.getItem(THEME_KEY)
+  const savedTheme = localStorage.getItem('theme')
     || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
   applyTheme(savedTheme);
 
   themeBtn.addEventListener('click', () => {
-    applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    applyTheme(html.dataset.theme === 'dark' ? 'light' : 'dark');
   });
 
-  /* ===== 言語 ===== */
-  const langBtn   = document.getElementById('lang-toggle');
-  const LANG_KEY  = 'lang';
+  /* ── i18n ── */
+  const langBtn = document.getElementById('lang-toggle');
 
   function applyLang(lang) {
-    html.setAttribute('lang', lang);
-    langBtn.textContent = lang === 'ja' ? 'JP' : 'EN';
+    html.lang = lang;
+    langBtn.textContent = lang === 'ja' ? 'EN' : 'JP';
     langBtn.setAttribute('aria-pressed', String(lang === 'en'));
-    localStorage.setItem(LANG_KEY, lang);
+    localStorage.setItem('lang', lang);
 
+    const key = lang === 'ja' ? 'i18nJp' : 'i18nEn';
     document.querySelectorAll('[data-i18n-jp]').forEach(el => {
-      const text = lang === 'ja'
-        ? el.getAttribute('data-i18n-jp')
-        : el.getAttribute('data-i18n-en');
-      if (text !== null) el.textContent = text;
+      const text = el.dataset[key];
+      if (text) el.innerHTML = text;
     });
   }
 
-  const savedLang = localStorage.getItem(LANG_KEY)
+  const savedLang = localStorage.getItem('lang')
     || (navigator.language.startsWith('ja') ? 'ja' : 'en');
   applyLang(savedLang);
 
   langBtn.addEventListener('click', () => {
-    applyLang(html.getAttribute('lang') === 'ja' ? 'en' : 'ja');
+    applyLang(html.lang === 'ja' ? 'en' : 'ja');
   });
 
-  /* ===== IntersectionObserver (reveal) ===== */
+  /* ── IntersectionObserver (reveal) ── */
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!prefersReduced) {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      }),
       { threshold: 0.1 }
     );
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   } else {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
-
 })();
