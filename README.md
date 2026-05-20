@@ -1,14 +1,15 @@
 # Yuina Yamaguchi — Portfolio
 
-Personal portfolio site built with plain HTML / CSS / JS. No build tools, no frameworks, no external dependencies.
+Personal portfolio site. Plain HTML / CSS / JS — no build tools, no frameworks, no external dependencies.
 
 ## GitHub Pages へのデプロイ手順
 
 ### 1. リポジトリを作成する
 
-GitHub で新しいリポジトリを作成します。  
-GitHub Pages でルート URL（`https://<username>.github.io/`）として公開したい場合は、リポジトリ名を **`<username>.github.io`** にしてください。  
-サブパス（`https://<username>.github.io/<repo>/`）でよければ任意の名前で構いません。
+GitHub で新しいリポジトリを作成します。
+
+- ルート URL（`https://<username>.github.io/`）で公開したい場合 → リポジトリ名を **`<username>.github.io`** にする
+- サブパス（`https://<username>.github.io/<repo>/`）でよい場合 → 任意の名前で可
 
 ### 2. ファイルをプッシュする
 
@@ -23,33 +24,30 @@ git push -u origin main
 
 ### 3. GitHub Pages を有効にする
 
-1. リポジトリページの **Settings** タブを開く
+1. リポジトリの **Settings** タブを開く
 2. 左サイドバーの **Pages** をクリック
-3. **Source** を `Deploy from a branch` に設定
-4. **Branch** を `main` / `(root)` に設定して **Save**
+3. **Source** → `Deploy from a branch`
+4. **Branch** → `main` / `(root)` → **Save**
 
 数分後、`https://<username>.github.io/<repo>/` でサイトが公開されます。
 
 ### 4. カスタムドメイン（任意）
 
-独自ドメインを使う場合は **Custom domain** 欄にドメインを入力し、DNS に CNAME レコードを追加してください。
+**Custom domain** 欄にドメインを入力し、DNS に CNAME レコードを追加してください。
 
 ---
 
-## ローカルで確認する
-
-ビルド不要です。`index.html` をブラウザで直接開くか、簡易サーバーを使ってください。
+## ローカル確認
 
 ```bash
-# Python 3
 python -m http.server 8080
 # → http://localhost:8080
 ```
 
-## TODO（公開前に埋めてください）
+## 公開前に埋めるべき TODO
 
-- `index.html` 内の `TODO:` コメントをすべて実際の内容に置き換える
+- `index.html` 内の `TODO:` をすべて実際の内容に置き換える
 - プロフィール写真を用意し `<img src="...">` の URL を更新する
-- OGP 画像 URL（`og:image`）を設定する
+- `og:image` に画像 URL を設定する
 - SNS リンクを追加する
 - スキルセクションに実際のスキルを追加する
