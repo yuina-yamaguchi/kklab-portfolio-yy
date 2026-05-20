@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{NAME_JP}} / {{NAME_EN}} — Portfolio</title>
-  <meta name="description" content="{{NAME_JP}}（{{NAME_EN}}）のポートフォリオサイト。{{HEADLINE_JP}} / {{HEADLINE_EN}}">
-  <meta property="og:title" content="{{NAME_JP}} / {{NAME_EN}} — Portfolio">
-  <meta property="og:description" content="{{NAME_JP}}（{{NAME_EN}}）のポートフォリオサイト。{{HEADLINE_JP}}">
-  <meta property="og:image" content="{{PHOTO_URL}}">
+  <title>山口唯奈 / Yuina Yamaguchi — Portfolio</title>
+  <meta name="description" content="山口唯奈（Yuina Yamaguchi）のポートフォリオ。経済学部・会計ファイナンス学科／AIエージェント。Portfolio of Yuina Yamaguchi, Economics, Accounting &amp; Finance Track.">
+  <meta property="og:title" content="Yuina Yamaguchi — Portfolio">
+  <meta property="og:description" content="Economics, Accounting &amp; Finance Track / AI Agent Portfolio">
+  <meta property="og:image" content="TODO: あなたのプロフィール写真URLを入れてください">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://{{GITHUB_USERNAME}}.github.io/">
+  <meta property="og:url" content="https://yuina-yamaguchi.github.io/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{NAME_JP}} / {{NAME_EN}} — Portfolio">
-  <meta name="twitter:description" content="{{NAME_JP}}（{{NAME_EN}}）のポートフォリオサイト。{{HEADLINE_JP}}">
-  <meta name="twitter:image" content="{{PHOTO_URL}}">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='white'>{{INITIALS}}</text></svg>">
+  <meta name="twitter:title" content="Yuina Yamaguchi — Portfolio">
+  <meta name="twitter:description" content="Economics, Accounting &amp; Finance Track / AI Agent Portfolio">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B1E2E'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='white'>YY</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,11 +23,11 @@
   <div class="blob blob-2" aria-hidden="true"></div>
   <div class="blob blob-3" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <header>
     <div class="header-inner">
-      <a href="#hero" class="logo" aria-label="トップへ戻る">{{INITIALS}}</a>
+      <a href="#hero" class="logo" aria-label="Yuina Yamaguchi — トップへ">YY</a>
       <nav aria-label="メインナビゲーション">
-        <ul class="nav-list">
+        <ul>
           <li><a href="#about"      data-i18n-jp="About"      data-i18n-en="About">About</a></li>
           <li><a href="#projects"   data-i18n-jp="Projects"   data-i18n-en="Projects">Projects</a></li>
           <li><a href="#experience" data-i18n-jp="経歴"        data-i18n-en="Experience">経歴</a></li>
@@ -45,113 +44,147 @@
   <main id="main-content">
 
     <!-- Hero -->
-    <section id="hero" aria-labelledby="hero-name">
+    <section id="hero">
       <div class="hero-inner">
-        <img
-          src="{{PHOTO_URL}}"
-          alt="{{NAME_JP}}のプロフィール写真"
-          width="160"
-          height="160"
-          class="hero-photo"
-          onerror="this.style.display='none'"
-        >
+        <div class="hero-photo-wrap">
+          <img
+            src="TODO: あなたのプロフィール写真URLを入れてください"
+            alt="山口唯奈のプロフィール写真"
+            width="200" height="200"
+            class="hero-photo"
+          >
+        </div>
         <div class="hero-text">
-          <h1 id="hero-name">
-            <span data-i18n-jp="{{NAME_JP}}" data-i18n-en="{{NAME_EN}}">{{NAME_JP}}</span>
-          </h1>
+          <h1 class="gradient-text">Yuina Yamaguchi</h1>
           <p class="hero-headline">
-            <span data-i18n-jp="{{HEADLINE_JP}}" data-i18n-en="{{HEADLINE_EN}}">{{HEADLINE_JP}}</span>
+            <span data-i18n-jp="経済学部３年・会計ファイナンス学科 / AIエージェント"
+                  data-i18n-en="Economics, Accounting &amp; Finance Track">
+              経済学部３年・会計ファイナンス学科 / AIエージェント
+            </span>
           </p>
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary" data-i18n-jp="Projects を見る" data-i18n-en="View Projects">Projects を見る</a>
-            <a href="#contact"  class="btn btn-outline" data-i18n-jp="Contact"          data-i18n-en="Contact">Contact</a>
+            <a href="#projects" class="btn btn-primary"   data-i18n-jp="Projects" data-i18n-en="Projects">Projects</a>
+            <a href="#contact"  class="btn btn-secondary" data-i18n-jp="Contact"  data-i18n-en="Contact">Contact</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="reveal" aria-labelledby="about-heading">
+    <section id="about" class="reveal">
       <div class="section-inner">
-        <h2 id="about-heading">
+        <h2 class="section-title">
           <span data-i18n-jp="About" data-i18n-en="About">About</span>
           <span class="section-underline" aria-hidden="true"></span>
         </h2>
         <div class="about-body">
-          <p data-i18n-jp="{{BIO_JP}}" data-i18n-en="{{BIO_EN}}">{{BIO_JP}}</p>
+          <p data-i18n-jp="あ" data-i18n-en="a">あ</p>
+          <p data-i18n-jp="TODO: 自己紹介の続きを入れてください（200〜400字）"
+             data-i18n-en="TODO: Add more about yourself here (200–400 words).">
+            TODO: 自己紹介の続きを入れてください（200〜400字）
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="reveal" aria-labelledby="skills-heading">
+    <section id="skills" class="reveal">
       <div class="section-inner">
-        <h2 id="skills-heading">
+        <h2 class="section-title">
           <span data-i18n-jp="スキル" data-i18n-en="Skills">スキル</span>
           <span class="section-underline" aria-hidden="true"></span>
         </h2>
-        <!-- TODO: スキルカテゴリと項目を以下のパターンで追加してください -->
         <div class="skills-group">
-          <h3 data-i18n-jp="言語" data-i18n-en="Languages">言語</h3>
-          <ul class="badge-list" aria-label="言語スキル">
-            <li class="badge badge-accent" data-i18n-jp="TODO: スキルを追加してください" data-i18n-en="TODO: Add your skills">TODO: スキルを追加してください</li>
+          <h3 data-i18n-jp="音楽" data-i18n-en="Music">音楽</h3>
+          <ul class="badge-list">
+            <li><span class="badge badge-accent1">Piano</span></li>
+            <li><span class="badge badge-accent2">Saxophone</span></li>
+            <li><span class="badge badge-accent3">Flute</span></li>
           </ul>
         </div>
         <div class="skills-group">
-          <h3 data-i18n-jp="ツール・フレームワーク" data-i18n-en="Tools &amp; Frameworks">ツール・フレームワーク</h3>
-          <ul class="badge-list" aria-label="ツール・フレームワークスキル">
-            <li class="badge badge-accent2" data-i18n-jp="TODO: スキルを追加してください" data-i18n-en="TODO: Add your skills">TODO: スキルを追加してください</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3 data-i18n-jp="その他" data-i18n-en="Other">その他</h3>
-          <ul class="badge-list" aria-label="その他スキル">
-            <li class="badge badge-accent3" data-i18n-jp="TODO: スキルを追加してください" data-i18n-en="TODO: Add your skills">TODO: スキルを追加してください</li>
+          <h3 data-i18n-jp="TODO: スキルカテゴリを追加してください"
+              data-i18n-en="TODO: Add a skill category">
+            TODO: スキルカテゴリを追加してください
+          </h3>
+          <ul class="badge-list">
+            <li><span class="badge badge-accent1">TODO: スキルを追加してください</span></li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="reveal" aria-labelledby="projects-heading">
+    <section id="projects" class="reveal">
       <div class="section-inner">
-        <h2 id="projects-heading">
-          <span data-i18n-jp="プロジェクト" data-i18n-en="Projects">プロジェクト</span>
+        <h2 class="section-title">
+          <span data-i18n-jp="Projects" data-i18n-en="Projects">Projects</span>
           <span class="section-underline" aria-hidden="true"></span>
         </h2>
         <div class="projects-grid">
-          <!-- TODO: 以下のカードを各プロジェクト分コピーして追加してください -->
-          <article class="project-card reveal">
+
+          <article class="card">
             <div class="card-body">
-              <h3 class="card-title" data-i18n-jp="TODO: プロジェクト名を入力してください" data-i18n-en="TODO: Enter project title">TODO: プロジェクト名を入力してください</h3>
-              <p class="card-desc" data-i18n-jp="TODO: プロジェクトの説明を入力してください。" data-i18n-en="TODO: Enter project description.">TODO: プロジェクトの説明を入力してください。</p>
+              <h3 class="card-title"
+                  data-i18n-jp="サボテンアイスの疑似販売ページ"
+                  data-i18n-en="Cactus Ice Cream Sample Page">
+                サボテンアイスの疑似販売ページ
+              </h3>
+              <p class="card-desc"
+                 data-i18n-jp="kiroを使ったランディングページ作成デモ"
+                 data-i18n-en="Demonstration of Building a Landing Page with Kiro">
+                kiroを使ったランディングページ作成デモ
+              </p>
               <ul class="badge-list card-tech" aria-label="使用技術">
-                <li class="badge badge-accent">TODO: 技術名</li>
+                <li><span class="badge badge-accent1">TODO: 使用技術を追加してください</span></li>
               </ul>
             </div>
             <div class="card-links">
-              <a href="{{REPO_URL}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-i18n-jp="GitHub" data-i18n-en="GitHub">GitHub</a>
-              <a href="{{LIVE_URL}}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n-jp="Live" data-i18n-en="Live">Live</a>
+              <a href="https://github.com/yuina-yamaguchi/Cactus-Ice-Cream-Sample-Page"
+                 target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="file:///C:/Users/yxyam/my-kiro-samples/index.html"
+                 target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live
+              </a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="reveal" aria-labelledby="experience-heading">
+    <section id="experience" class="reveal">
       <div class="section-inner">
-        <h2 id="experience-heading">
-          <span data-i18n-jp="経歴・学歴" data-i18n-en="Experience">経歴・学歴</span>
+        <h2 class="section-title">
+          <span data-i18n-jp="経歴" data-i18n-en="Experience">経歴</span>
           <span class="section-underline" aria-hidden="true"></span>
         </h2>
-        <ol class="timeline" aria-label="経歴タイムライン">
-          <!-- TODO: 以下の <li> を各経歴分コピーして追加してください -->
-          <li class="timeline-item reveal">
-            <span class="timeline-year">TODO: 年を入力</span>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
             <div class="timeline-content">
-              <strong data-i18n-jp="TODO: 役職名を入力してください" data-i18n-en="TODO: Enter role">TODO: 役職名を入力してください</strong>
-              <span class="timeline-org" data-i18n-jp="TODO: 所属組織名を入力してください" data-i18n-en="TODO: Enter organization">TODO: 所属組織名を入力してください</span>
+              <time class="timeline-year">2024-04 〜 現在</time>
+              <p class="timeline-role"
+                 data-i18n-jp="経済学部・会計ファイナンス学科"
+                 data-i18n-en="B.A. in Economics, Accounting &amp; Finance Track, Junior">
+                経済学部・会計ファイナンス学科
+              </p>
+              <p class="timeline-org"
+                 data-i18n-jp="名古屋市立大学"
+                 data-i18n-en="Nagoya City University">
+                名古屋市立大学
+              </p>
             </div>
           </li>
         </ol>
@@ -159,51 +192,49 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="reveal" aria-labelledby="contact-heading">
+    <section id="contact" class="reveal">
       <div class="section-inner">
-        <h2 id="contact-heading">
+        <h2 class="section-title">
           <span data-i18n-jp="Contact" data-i18n-en="Contact">Contact</span>
           <span class="section-underline" aria-hidden="true"></span>
         </h2>
-        <ul class="contact-list" aria-label="連絡先リンク">
+        <ul class="contact-list">
           <li>
-            <a href="https://github.com/{{GITHUB_USERNAME}}" target="_blank" rel="noopener noreferrer" aria-label="GitHub プロフィール">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <a href="https://github.com/Yuina-Yamaguchi" target="_blank" rel="noopener noreferrer" aria-label="GitHub プロフィール">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
               </svg>
-              <span data-i18n-jp="GitHub" data-i18n-en="GitHub">GitHub</span>
+              <span>Yuina-Yamaguchi</span>
             </a>
           </li>
           <li>
-            <a href="mailto:{{EMAIL}}" aria-label="メールを送る">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <a href="mailto:c243257@ed.nagoya-cu.ac.jp" aria-label="メールを送る">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>
-              <span>{{EMAIL}}</span>
+              <span>c243257@ed.nagoya-cu.ac.jp</span>
             </a>
           </li>
           <li>
-            <a href="https://x.com/{{X_HANDLE}}" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) プロフィール">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            <a href="TODO: SNSのURLを入れてください" aria-label="TODO: SNS名を入れてください">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
               </svg>
-              <span data-i18n-jp="X (Twitter)" data-i18n-en="X (Twitter)">X (Twitter)</span>
+              <span data-i18n-jp="TODO: SNSを追加してください" data-i18n-en="TODO: Add your SNS link">TODO: SNSを追加してください</span>
             </a>
           </li>
-          <!-- TODO: その他 SNS がある場合は以下のパターンで追加してください -->
-          <!-- <li><a href="{{OTHER_SOCIAL_URL}}" target="_blank" rel="noopener noreferrer" aria-label="TODO: SNS名">SVGアイコン + <span>SNS名</span></a></li> -->
         </ul>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <p>
-      <span data-i18n-jp="© 2026 {{NAME_EN}}" data-i18n-en="© 2026 {{NAME_EN}}">© 2026 {{NAME_EN}}</span>
-      &nbsp;·&nbsp;
-      <a href="https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_USERNAME}}.github.io" target="_blank" rel="noopener noreferrer" data-i18n-jp="GitHub リポジトリ" data-i18n-en="GitHub Repository">GitHub リポジトリ</a>
+  <footer>
+    <p>© 2026 Yuina Yamaguchi &nbsp;·&nbsp;
+      <a href="https://github.com/Yuina-Yamaguchi" target="_blank" rel="noopener noreferrer">GitHub</a>
     </p>
   </footer>
 
