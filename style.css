@@ -104,11 +104,11 @@ header {
   flex-shrink: 0;
 }
 .logo img {
-  height: 32px;   /* ナビの高さに合わせて調整 */
-  width: 32px;    /* 正方形にしたい場合 */
+  height: 36px;   /* ナビの高さに合わせて調整 */
+  width: 36px;    /* 正方形にしたい場合 */
   border-radius: 50%;  /* 丸いアイコンにしたい場合 */
   object-fit: cover;
-  border: 2px solid #5B1E2E;
+  border: 4px solid #5B1E2E;
   display: block;
 }
 nav { flex: 1; }
