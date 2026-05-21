@@ -98,14 +98,17 @@ header {
   gap: 1.5rem;
 }
 .logo {
-  font-weight: 800;
-  font-size: 1.2rem;
-  background: var(--gradient-hero);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+}
+.logo img {
+  height: 32px;   /* ナビの高さに合わせて調整 */
+  width: 32px;    /* 正方形にしたい場合 */
+  border-radius: 50%;  /* 丸いアイコンにしたい場合 */
+  object-fit: cover;
+  display: block;
 }
 nav { flex: 1; }
 nav ul { display: flex; gap: 5.5rem; list-style: none; justify-content: center; }
