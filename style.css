@@ -176,7 +176,6 @@ section { padding: 5rem 1.5rem; scroll-margin-top: var(--header-h); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 }
 .section-underline {
   display: block;
@@ -316,6 +315,7 @@ h1.gradient-text {
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.35rem 0.9rem;
+  margin-left: auto;
   border-radius: var(--radius-pill);
   border: 1px solid var(--accent);
   background: transparent;
