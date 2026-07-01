@@ -38,15 +38,6 @@
     updateExperienceToggle();
   }
 
-  applyLang(
-    localStorage.getItem('lang') ||
-    (navigator.language.startsWith('ja') ? 'ja' : 'en')
-  );
-
-  langBtn.addEventListener('click', () =>
-    applyLang(html.lang === 'ja' ? 'en' : 'ja')
-  );
-
   /* ── Experience Toggle ── */
   const experienceToggle = document.getElementById('experience-toggle');
   const timelineBg = document.querySelector('.timeline[data-category="background"]');
@@ -69,6 +60,15 @@
     experienceToggle.textContent = isMusic ? showBg : showMusic;
     experienceToggle.setAttribute('aria-pressed', String(isMusic));
   }
+
+  applyLang(
+    localStorage.getItem('lang') ||
+    (navigator.language.startsWith('ja') ? 'ja' : 'en')
+  );
+
+  langBtn.addEventListener('click', () =>
+    applyLang(html.lang === 'ja' ? 'en' : 'ja')
+  );
 
   if (experienceToggle) {
     experienceToggle.addEventListener('click', () => {
