@@ -34,6 +34,8 @@
       const text = el.dataset[key];
       if (text) el.innerHTML = text;
     });
+
+    updateExperienceToggle();
   }
 
   applyLang(
@@ -44,6 +46,38 @@
   langBtn.addEventListener('click', () =>
     applyLang(html.lang === 'ja' ? 'en' : 'ja')
   );
+
+  /* ── Experience Toggle ── */
+  const experienceToggle = document.getElementById('experience-toggle');
+  const timelineBg = document.querySelector('.timeline[data-category="background"]');
+  const timelineMusic = document.querySelector('.timeline[data-category="music"]');
+
+  let currentCategory = 'background';
+
+  function updateExperienceToggle() {
+    if (!experienceToggle) return;
+    const isMusic = currentCategory === 'music';
+    const lang = html.lang === 'en' ? 'en' : 'ja';
+    
+    const showMusic = lang === 'en' 
+      ? experienceToggle.dataset.i18nEnShowMusic 
+      : experienceToggle.dataset.i18nJpShowMusic;
+    const showBg = lang === 'en' 
+      ? experienceToggle.dataset.i18nEnShowBg 
+      : experienceToggle.dataset.i18nJpShowBg;
+    
+    experienceToggle.textContent = isMusic ? showBg : showMusic;
+    experienceToggle.setAttribute('aria-pressed', String(isMusic));
+  }
+
+  if (experienceToggle) {
+    experienceToggle.addEventListener('click', () => {
+      currentCategory = currentCategory === 'background' ? 'music' : 'background';
+      timelineBg.classList.toggle('hidden', currentCategory === 'music');
+      timelineMusic.classList.toggle('hidden', currentCategory === 'background');
+      updateExperienceToggle();
+    });
+  }
 
   /* ── Reveal on scroll ── */
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

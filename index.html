@@ -214,18 +214,94 @@
     <section id="experience" class="reveal">
       <div class="section-inner">
         <h2 class="section-title">
-          <span data-i18n-jp="経歴" data-i18n-en="Experience">Experience</span>
+          <span class="section-title-row">
+            <span data-i18n-jp="経歴" data-i18n-en="Experience">Experience</span>
+            <button 
+              id="experience-toggle" 
+              class="experience-toggle-btn"
+              aria-label="経歴カテゴリを切り替える"
+              aria-pressed="false"
+              data-i18n-jp-show-music="音楽"
+              data-i18n-en-show-music="Music"
+              data-i18n-jp-show-bg="学歴・活動"
+              data-i18n-en-show-bg="Background"
+            >
+              音楽
+            </button>
+          </span>
           <span class="section-underline" aria-hidden="true"></span>
         </h2>
-        <ol class="timeline">
+
+        <!-- 学歴・活動タイムライン -->
+        <ol class="timeline" data-category="background">
           <li class="timeline-item">
             <span class="timeline-dot" aria-hidden="true"></span>
             <div class="timeline-content">
               <time class="timeline-year">2024-04 〜 現在</time>
               <p class="timeline-role"
-                 data-i18n-jp="経済学部"
+                 data-i18n-jp="経済学部・会計ファイナンス学科"
                  data-i18n-en="B.A. in Economics, Accounting &amp; Finance Track, Junior">
-                経済学部
+                経済学部・会計ファイナンス学科
+              </p>
+              <p class="timeline-org"
+                 data-i18n-jp="名古屋市立大学"
+                 data-i18n-en="Nagoya City University">
+                名古屋市立大学
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <!-- 音楽タイムライン（初期非表示） -->
+        <ol class="timeline hidden" data-category="music">
+          <!-- TODO: 実際の経歴に書き換えてください -->
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <time class="timeline-year">XXXX-XX 〜 XXXX-XX</time>
+              <p class="timeline-role"
+                 data-i18n-jp="楽器名（例：サックス）"
+                 data-i18n-en="Instrument (e.g. Saxophone)">
+                楽器名
+              </p>
+              <p class="timeline-org"
+                 data-i18n-jp="団体名（例：吹奏楽部）"
+                 data-i18n-en="Organization (e.g. Wind Ensemble)">
+                団体名
+              </p>
+            </div>
+          </li>
+          <!-- TODO: 実際の経歴に書き換えてください -->
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <time class="timeline-year">XXXX-XX 〜 XXXX-XX</time>
+              <p class="timeline-role"
+                 data-i18n-jp="楽器名"
+                 data-i18n-en="Instrument">
+                楽器名
+              </p>
+              <p class="timeline-org"
+                 data-i18n-jp="団体名"
+                 data-i18n-en="Organization">
+                団体名
+              </p>
+            </div>
+          </li>
+          <!-- TODO: 実際の経歴に書き換えてください -->
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <time class="timeline-year">XXXX-XX 〜 XXXX-XX</time>
+              <p class="timeline-role"
+                 data-i18n-jp="楽器名"
+                 data-i18n-en="Instrument">
+                楽器名
+              </p>
+              <p class="timeline-org"
+                 data-i18n-jp="団体名"
+                 data-i18n-en="Organization">
+                団体名
               </p>
             </div>
           </li>
