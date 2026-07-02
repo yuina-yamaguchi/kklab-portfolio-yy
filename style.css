@@ -322,6 +322,7 @@ h1.gradient-text {
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.2s, color 0.2s;
+  transform: translateY(4px);
 }
 .experience-toggle-btn[aria-pressed="true"] {
   background: var(--accent);
