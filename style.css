@@ -172,7 +172,7 @@ section { padding: 5rem 1.5rem; scroll-margin-top: var(--header-h); }
   flex-direction: column;
   gap: 0.5rem;
 }
-.section-title-bottom {
+.section-title-row {
   display: flex;
   align-items: flex-end;
   gap: 1rem;
