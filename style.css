@@ -14,6 +14,8 @@
   --accent:   #5B1E2E;
   --accent-2: #5B4A1E;
   --accent-3: #2E1E5B;
+  --accent-4: #1D5B4E;
+  --accent-5: #5B2E1D;
 
   --gradient-hero: linear-gradient(135deg, var(--accent), var(--accent-2) 50%, var(--accent-3));
   --shadow-glow:   0 8px 32px -8px color-mix(in srgb, var(--accent) 40%, transparent);
@@ -34,6 +36,8 @@
   --accent:   #7a2840;
   --accent-2: #7a6228;
   --accent-3: #3d2878;
+  --accent-4: #29786a;
+  --accent-5: #7a3f28;
 
   --gradient-hero: linear-gradient(135deg, var(--accent), var(--accent-2) 50%, var(--accent-3));
   --shadow-glow:   0 8px 32px -8px color-mix(in srgb, var(--accent) 30%, transparent);
@@ -261,6 +265,16 @@ h1.gradient-text {
   background: color-mix(in srgb, var(--accent-3) 15%, transparent);
   color: var(--accent-3);
   border: 1px solid color-mix(in srgb, var(--accent-3) 30%, transparent);
+}
+.badge-accent4 {
+  background: color-mix(in srgb, var(--accent-4) 15%, transparent);
+  color: var(--accent-4);
+  border: 1px solid color-mix(in srgb, var(--accent-4) 30%, transparent);
+}
+.badge-accent5 {
+  background: color-mix(in srgb, var(--accent-5) 15%, transparent);
+  color: var(--accent-5);
+  border: 1px solid color-mix(in srgb, var(--accent-5) 30%, transparent);
 }
 
 /* ===== Projects ===== */
